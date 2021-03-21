@@ -1,0 +1,164 @@
+{
+  "tests": [
+    {
+      "name": "TestCase 01: Array List constructor",
+      "setup": "git submodule update --init --recursive && mkdir -p build && cd build && cmake .. && cmake --build .",
+      "run": "cd build && ctest -VVV -R \"create empty array list\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "TestCase 02: ArrayList::Add(e) ",
+      "setup": "git submodule update --init --recursive && mkdir -p build && cd build && cmake .. && cmake --build .",
+      "run": "cd build && ctest -VVV -R \"add elements to the array list\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "TestCase 03: ArrayList::Insert(index, e)",
+      "setup": "git submodule update --init --recursive && mkdir -p build && cd build && cmake .. && cmake --build .",
+      "run": "cd build && ctest -VVV -R \"insert elements into the array list\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "TestCase 04: ArrayList::Remove(index)",
+      "setup": "git submodule update --init --recursive && mkdir -p build && cd build && cmake .. && cmake --build .",
+      "run": "cd build && ctest -VVV -R \"remove elements from the array list\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "TestCase 05: ArrayList::Clear()",
+      "setup": "git submodule update --init --recursive && mkdir -p build && cd build && cmake .. && cmake --build .",
+      "run": "cd build && ctest -VVV -R \"clear array list\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "TestCase 06: ArrayList::Get(index)",
+      "setup": "git submodule update --init --recursive && mkdir -p build && cd build && cmake .. && cmake --build .",
+      "run": "cd build && ctest -VVV -R \"access array list elements by index\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "TestCase 07: ArrayList::IndexOf(e)",
+      "setup": "git submodule update --init --recursive && mkdir -p build && cd build && cmake .. && cmake --build .",
+      "run": "cd build && ctest -VVV -R \"find array list element index\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "TestCase 08: ArrayList::Set(index, e)",
+      "setup": "git submodule update --init --recursive && mkdir -p build && cd build && cmake .. && cmake --build .",
+      "run": "cd build && ctest -VVV -R \"set array list element value\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "TestCase 09: LinkedList::Add(e)",
+      "setup": "git submodule update --init --recursive && mkdir -p build && cd build && cmake .. && cmake --build .",
+      "run": "cd build && ctest -VVV -R \"add elements to the linked list\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "TestCase 10: LinkedList::Insert(index, e)",
+      "setup": "git submodule update --init --recursive && mkdir -p build && cd build && cmake .. && cmake --build .",
+      "run": "cd build && ctest -VVV -R \"insert elements to the linked list\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "TestCase 11: LinkedList::Set(index ,e)",
+      "setup": "git submodule update --init --recursive && mkdir -p build && cd build && cmake .. && cmake --build .",
+      "run": "cd build && ctest -VVV -R \"set linked list element\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "TestCase 12: LinkedList::Remove(index)",
+      "setup": "git submodule update --init --recursive && mkdir -p build && cd build && cmake .. && cmake --build .",
+      "run": "cd build && ctest -VVV -R \"remove linked list elements\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "TestCase 13: LinkedList::Clear()",
+      "setup": "git submodule update --init --recursive && mkdir -p build && cd build && cmake .. && cmake --build .",
+      "run": "cd build && ctest -VVV -R \"clear linked list\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "TestCase 14: LinkedList::Get(index)",
+      "setup": "git submodule update --init --recursive && mkdir -p build && cd build && cmake .. && cmake --build .",
+      "run": "cd build && ctest -VVV -R \"get linked list element by index\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "TestCase 15: LinkedList::IndexOf(e)",
+      "setup": "git submodule update --init --recursive && mkdir -p build && cd build && cmake .. && cmake --build .",
+      "run": "cd build && ctest -VVV -R \"find linked list elements\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 5,
+      "points": 1
+    },
+    {
+      "name": "Check memory leaks",
+      "setup": "git submodule update --init --recursive && sudo apt-get -qq update && sudo apt-get install -qq valgrind && mkdir -p build && cd build && cmake .. && cmake --build .",
+      "run": "cd build && ctest -VVV -D ExperimentalMemCheck --overwrite MemoryCheckCommandOptions=\"--leak-check=full --error-exitcode=100\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
